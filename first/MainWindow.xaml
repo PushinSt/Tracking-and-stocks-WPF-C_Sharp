@@ -1,0 +1,98 @@
+﻿<Window x:Class="first.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:first"
+        mc:Ignorable="d"
+        Title="Product management" Height="600" Width="600" MinWidth="450" MinHeight="500">
+
+
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,0,0,0">Прием</Label>
+        <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,0,0,0">Отгрузка</Label>
+        <Label Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,0,0,0">Запасы</Label>
+
+        <DatePicker x:Name="DatePicker1" Grid.Column="0" Grid.Row="2" Margin="0,0,200,0" HorizontalAlignment="Right" VerticalAlignment="Top" SelectedDate="09/15/21"/>
+        <Button x:Name="RefreshDataGrid3Button" Grid.Column="0" Grid.Row="2" Content="Показать" Margin="0,0,140,0" HorizontalAlignment="Right" VerticalAlignment="Top" Click="RefreshDataGrid3Button_Click"/>
+        <Button x:Name="SaveButton" Grid.Column="0" Grid.Row="2" Content="Скачать"  Margin="0,0,30,0" HorizontalAlignment="Right" VerticalAlignment="Top" Click="SaveButton_Click" IsEnabled="False"/>
+
+
+
+        <DataGrid Margin="30" Name="WPFDataGrid1" Grid.Column="0" Grid.Row="0" AutoGenerateColumns="False" ColumnWidth="Auto" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название&#x0a;склада"  
+                             Binding="{Binding Path=Store}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Наименование&#x0a;товара"  
+                             Binding="{Binding Path=Name}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Количество&#x0a;товара" 
+                             Binding="{Binding Path=Count}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Масса 1&#x0a;шт, кг"  
+                             Binding="{Binding Path=Weight}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Хрупкое&#x0a;да/нет"  
+                             Binding="{Binding Path=Fragile}">
+                </DataGridTextColumn>
+                <DataGridTextColumn  Header="Дата поступления&#x0a;на склад"   
+                             Binding="{Binding Path=Date, StringFormat={}{0:dd/MM/yyyy} }"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <DataGrid Margin="30" Name="WPFDataGrid2" Grid.Column="0" Grid.Row="1" AutoGenerateColumns="False" ColumnWidth="Auto" IsReadOnly="True">
+            <DataGrid.Columns>
+
+
+
+                <DataGridTextColumn Header="Название&#x0a;склада"  
+                             Binding="{Binding Path=Store}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Наименование&#x0a;товара"  
+                             Binding="{Binding Path=Name}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Количество&#x0a;товара" 
+                             Binding="{Binding Path=Count}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Масса 1&#x0a;шт, кг"  
+                             Binding="{Binding Path=Weight}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Хрупкое&#x0a;да/нет"  
+                             Binding="{Binding Path=Fragile}">
+                </DataGridTextColumn>
+                <DataGridTextColumn  Header="Дата отгрузки&#x0a;со склада"   
+                             Binding="{Binding Path=Date, StringFormat={}{0:dd/MM/yyyy} }"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+        <DataGrid Margin="30" Name="WPFDataGrid3" Grid.Column="0" Grid.Row="2" AutoGenerateColumns="False" ColumnWidth="Auto" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название"  
+                             Binding="{Binding Path=Name}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Количество товаров, шт"  
+                             Binding="{Binding Path=Count}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Масса всего, кг" 
+                             Binding="{Binding Path=Weight, StringFormat={}{0:#.#.00} }">
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+
+    </Grid>
+</Window>

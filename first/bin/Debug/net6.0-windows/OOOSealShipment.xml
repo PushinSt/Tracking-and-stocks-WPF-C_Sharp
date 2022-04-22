@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<return>
+	<storage>
+		<storage_name>Склад 1</storage_name>
+		<product>
+			<product_name>Товар A</product_name>
+			<count>9</count>
+			<m>0.3</m>
+			<fragile>да</fragile>
+			<date>29.08.2021</date>
+		</product>
+		<product>
+			<product_name>Товар B</product_name>
+			<count>36</count>
+			<m>0.96</m>
+			<fragile>нет</fragile>
+			<date>19.09.2021</date>
+		</product>
+		<product>
+			<product_name>Товар B</product_name>
+			<count>42</count>
+			<m>0.96</m>
+			<fragile>нет</fragile>
+			<date>07.10.2021</date>
+		</product>
+		<product>
+			<product_name>Товар C</product_name>
+			<count>19</count>
+			<m>4</m>
+			<fragile>нет</fragile>
+			<date>11.09.2021</date>
+		</product>
+		<product>
+			<product_name>Товар C</product_name>
+			<count>5</count>
+			<m>4</m>
+			<fragile>нет</fragile>
+			<date>16.10.2021</date>
+		</product>
+	</storage>
+	<storage>
+		<storage_name>Склад 2</storage_name>
+		<product>
+			<product_name>Товар A</product_name>
+			<count>21</count>
+			<m>0.3</m>
+			<fragile>да</fragile>
+			<date>15.09.2021</date>
+		</product>
+		<product>
+			<product_name>Товар A</product_name>
+			<count>17</count>
+			<m>0.3</m>
+			<fragile>да</fragile>
+			<date>20.09.2021</date>
+		</product>
+		<product>
+			<product_name>Товар C</product_name>
+			<count>4</count>
+			<m>4</m>
+			<fragile>нет</fragile>
+			<date>26.08.2021</date>
+		</product>
+		<product>
+			<product_name>Товар C</product_name>
+			<count>11</count>
+			<m>4</m>
+			<fragile>нет</fragile>
+			<date>05.09.2021</date>
+		</product>
+	</storage>
+</return>
